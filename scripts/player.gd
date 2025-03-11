@@ -1,8 +1,12 @@
 extends CharacterBody2D
 
 
-const SPEED = 10.0
-const JUMP_VELOCITY = -30.0
+var speed = 0
+
+const MAX_SPEED = 100
+const ACCELERATION = 1
+
+const JUMP_VELOCITY = -300.0
 
 const FRICTION = 70
 const ROTATION_SPEED = 5
@@ -22,14 +26,17 @@ func _physics_process(delta: float) -> void:
 	# As good practice, you should replace UI actions with custom gameplay actions.
 	var direction := Input.get_axis("left", "right")
 	
-	# Rotate player like a ball
-	rotation += direction * ROTATION_SPEED * delta
-	
 	if direction:
-		velocity.x = direction * SPEED
+		speed = min(speed + ACCELERATION, MAX_SPEED)
+		velocity.x = direction * speed
 	else:
-		velocity.x = move_toward(velocity.x, 0, SPEED)
-
+		speed = 0
+		velocity.x = move_toward(velocity.x, 0, speed)
+	
+	# Rotate player like a ball
+	if velocity.x != 0:
+		rotation += sign(velocity.x) * ROTATION_SPEED * (abs(velocity.x) / MAX_SPEED) * delta
+		
 	move_and_slide()
 
 
