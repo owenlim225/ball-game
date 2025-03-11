@@ -1,7 +1,7 @@
-[gd_scene load_steps=11 format=3 uid="uid://dogr1db2hjbql"]
+[gd_scene load_steps=11 format=3 uid="uid://dvbdxejr5tlip"]
 
 [ext_resource type="Script" path="res://Scripts/money.gd" id="1_keewe"]
-[ext_resource type="Texture2D" uid="uid://b2kkky8h5v2os" path="res://Assets/4 Animated objects/Money.png" id="1_q75sa"]
+[ext_resource type="Texture2D" uid="uid://b2kkky8h5v2os" path="res://assets/4 Animated objects/Money.png" id="1_q75sa"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_o7xj8"]
 atlas = ExtResource("1_q75sa")
@@ -61,6 +61,7 @@ script = ExtResource("1_keewe")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_u1ju0")
+autoplay = "default"
 frame_progress = 0.832629
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

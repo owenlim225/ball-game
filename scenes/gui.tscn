@@ -1,0 +1,81 @@
+[gd_scene load_steps=11 format=3 uid="uid://b5e5j53ciaxb1"]
+
+[ext_resource type="Texture2D" uid="uid://b2kkky8h5v2os" path="res://assets/4 Animated objects/Money.png" id="1_eej2n"]
+[ext_resource type="Script" path="res://scripts/gui.gd" id="1_v6qh6"]
+[ext_resource type="FontFile" uid="uid://bx75tlxirv80k" path="res://assets/FutureMillennium.ttf" id="3_yjimw"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8ak0f"]
+atlas = ExtResource("1_eej2n")
+region = Rect2(0, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yrblu"]
+atlas = ExtResource("1_eej2n")
+region = Rect2(24, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rw1o6"]
+atlas = ExtResource("1_eej2n")
+region = Rect2(48, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_afi65"]
+atlas = ExtResource("1_eej2n")
+region = Rect2(72, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vhcr8"]
+atlas = ExtResource("1_eej2n")
+region = Rect2(96, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hnod4"]
+atlas = ExtResource("1_eej2n")
+region = Rect2(120, 0, 24, 24)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qm1vc"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8ak0f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yrblu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rw1o6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_afi65")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vhcr8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hnod4")
+}],
+"loop": true,
+"name": &"default",
+"speed": 16.0
+}]
+
+[node name="GUI" type="CanvasLayer"]
+script = ExtResource("1_v6qh6")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 63.0
+grow_horizontal = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="MoneyAnim" type="AnimatedSprite2D" parent="MarginContainer"]
+position = Vector2(570, 59)
+scale = Vector2(3.58333, 3.58333)
+sprite_frames = SubResource("SpriteFrames_qm1vc")
+autoplay = "default"
+
+[node name="MoneyCount" type="Label" parent="MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("3_yjimw")
+theme_override_font_sizes/font_size = 48
+text = "100"

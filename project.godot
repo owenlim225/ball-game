@@ -24,6 +24,8 @@ GLOBAL="*res://scripts/GLOBAL.gd"
 window/size/viewport_width=1280
 window/size/viewport_height=720
 window/stretch/mode="canvas_items"
+window/main_scene="res://scenes/title_screen.tscn"
+window/canvas_textures/default_texture_filter=0
 
 [input]
 

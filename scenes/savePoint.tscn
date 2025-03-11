@@ -1,0 +1,56 @@
+[gd_scene load_steps=9 format=3 uid="uid://dr1eucoo6drvt"]
+
+[ext_resource type="Texture2D" uid="uid://b7q16nkcrexqq" path="res://assets/4 Animated objects/Fountain.png" id="1_6ja4y"]
+[ext_resource type="Script" path="res://scripts/save_point.gd" id="1_it6ao"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1dw2s"]
+atlas = ExtResource("1_6ja4y")
+region = Rect2(0, 0, 72, 72)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3osqh"]
+atlas = ExtResource("1_6ja4y")
+region = Rect2(72, 0, 72, 72)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8eova"]
+atlas = ExtResource("1_6ja4y")
+region = Rect2(144, 0, 72, 72)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ec3yq"]
+atlas = ExtResource("1_6ja4y")
+region = Rect2(216, 0, 72, 72)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_pkf3k"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1dw2s")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3osqh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8eova")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ec3yq")
+}],
+"loop": true,
+"name": &"default",
+"speed": 12.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cjm48"]
+size = Vector2(56, 70)
+
+[node name="savePoint" type="Area2D"]
+script = ExtResource("1_it6ao")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_pkf3k")
+autoplay = "default"
+frame_progress = 0.262958
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_cjm48")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
