@@ -1,15 +1,15 @@
 extends Area2D
+@onready var level_complete: CanvasLayer = $"../../../LevelComplete"
 
 
-# Called when the node enters the scene tree for the first time.
+var level_mode:int = 1
+
 func _ready() -> void:
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
-
+	level_complete.hide()
 
 func _on_body_entered(body: Node2D) -> void:
-	pass # Replace with function body.
+	GLOBAL.update_level.emit()
+	GLOBAL.level += level_mode
+	
+	print("Player saved!")
+	level_complete.show()

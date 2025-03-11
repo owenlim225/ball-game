@@ -1,0 +1,115 @@
+[gd_scene load_steps=12 format=3 uid="uid://c55qfqoaf57ay"]
+
+[ext_resource type="Script" path="res://scripts/buy_skin.gd" id="1_y33tl"]
+[ext_resource type="Texture2D" uid="uid://b2kkky8h5v2os" path="res://assets/4 Animated objects/Money.png" id="2_05tww"]
+[ext_resource type="FontFile" uid="uid://bx75tlxirv80k" path="res://assets/FutureMillennium.ttf" id="3_t31s8"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_aw622"]
+bg_color = Color(0.597416, 0.200522, 0.395719, 1)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8ak0f"]
+atlas = ExtResource("2_05tww")
+region = Rect2(0, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yrblu"]
+atlas = ExtResource("2_05tww")
+region = Rect2(24, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rw1o6"]
+atlas = ExtResource("2_05tww")
+region = Rect2(48, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_afi65"]
+atlas = ExtResource("2_05tww")
+region = Rect2(72, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vhcr8"]
+atlas = ExtResource("2_05tww")
+region = Rect2(96, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hnod4"]
+atlas = ExtResource("2_05tww")
+region = Rect2(120, 0, 24, 24)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qm1vc"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8ak0f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yrblu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rw1o6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_afi65")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vhcr8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hnod4")
+}],
+"loop": true,
+"name": &"default",
+"speed": 16.0
+}]
+
+[node name="buySkin" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_y33tl")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_aw622")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1194.0
+offset_bottom = -619.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="exitShopBtn" type="Button" parent="MarginContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_font_sizes/font_size = 48
+text = "x"
+
+[node name="MoneyAnim" type="AnimatedSprite2D" parent="."]
+position = Vector2(193, 616)
+scale = Vector2(3.58333, 3.58333)
+sprite_frames = SubResource("SpriteFrames_qm1vc")
+autoplay = "default"
+
+[node name="MoneyCount" type="Label" parent="."]
+layout_mode = 2
+offset_left = 241.0
+offset_top = 573.0
+offset_right = 382.0
+offset_bottom = 663.0
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("3_t31s8")
+theme_override_font_sizes/font_size = 80
+text = "100"
+
+[connection signal="pressed" from="MarginContainer/exitShopBtn" to="." method="_on_exit_shop_btn_pressed"]
