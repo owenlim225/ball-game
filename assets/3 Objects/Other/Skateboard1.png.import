@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bffwdtycrqsov"
-path="res://.godot/imported/player.png-be2216fcaabb5c62aa2466cd9a5726a8.ctex"
+uid="uid://1yo1i4snmwpj"
+path="res://.godot/imported/Skateboard1.png-05e61838f0a8268036793d280d83abe8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/player.png"
-dest_files=["res://.godot/imported/player.png-be2216fcaabb5c62aa2466cd9a5726a8.ctex"]
+source_file="res://assets/3 Objects/Other/Skateboard1.png"
+dest_files=["res://.godot/imported/Skateboard1.png-05e61838f0a8268036793d280d83abe8.ctex"]
 
 [params]
 
