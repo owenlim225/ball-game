@@ -848,7 +848,7 @@ position = Vector2(1830, 297)
 scale = Vector2(1.5, 1.5)
 
 [node name="savePoint" type="Area2D" parent="."]
-position = Vector2(158, 380)
+position = Vector2(1740, 519)
 scale = Vector2(1.5, 1.5)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="savePoint"]

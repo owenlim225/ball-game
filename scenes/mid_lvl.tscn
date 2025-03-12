@@ -850,7 +850,7 @@ rotation = 0.0597861
 scale = Vector2(1.5, 1.5)
 
 [node name="savePoint" type="Area2D" parent="."]
-position = Vector2(261, 481)
+position = Vector2(1984, 234)
 scale = Vector2(1.5, 1.5)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="savePoint"]

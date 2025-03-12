@@ -800,7 +800,7 @@ sources/0 = SubResource("TileSetAtlasSource_ge6pa")
 script = ExtResource("1_0goy0")
 
 [node name="savePoint" type="Area2D" parent="."]
-position = Vector2(125, 394)
+position = Vector2(2035, 227)
 scale = Vector2(1.5, 1.5)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="savePoint"]
