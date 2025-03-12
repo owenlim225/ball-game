@@ -1,9 +1,9 @@
 extends Control
 
 # Scenes
-const EASY_LVL = preload("res://Scenes/easy_lvl.tscn")
-const MEDIUM_LVL = preload("res://scenes/mid_lvl.tscn")
-#const HARD_LVL = preload("res://scenes/hard_level.tscn")
+const EASY_LVL = preload("res://scenes/easy_lvl.tscn")
+const HARD_LVL = preload("res://scenes/hard_lvl.tscn")
+const MID_LVL = preload("res://scenes/mid_lvl.tscn")
 
 # Panels
 @onready var main_screen: VBoxContainer = $Panel/mainScreen
@@ -40,11 +40,11 @@ func _on_easy_mode_pressed() -> void:
 
 func _on_medium_mode_pressed() -> void:
 	if GLOBAL.medium:
-		get_tree().change_scene_to_packed(MEDIUM_LVL)
-#
-#func _on_hard_mode_pressed() -> void:
-	#if GLOBAL.hard:
-		#get_tree().change_scene_to_packed(HARD_LVL)
+		get_tree().change_scene_to_packed(MID_LVL)
+
+func _on_hard_mode_pressed() -> void:
+	if GLOBAL.hard:
+		get_tree().change_scene_to_packed(HARD_LVL)
 
 # Main Menu Actions
 func _on_start_btn_pressed() -> void:

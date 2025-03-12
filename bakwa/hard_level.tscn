@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://bbihrpg7jrw67"]
+[gd_scene load_steps=15 format=3 uid="uid://bq6e58txclo5m"]
 
 [ext_resource type="PackedScene" uid="uid://dpywogmqhawh2" path="res://scenes/background_day.tscn" id="1_chh31"]
 [ext_resource type="Texture2D" uid="uid://b7q16nkcrexqq" path="res://assets/4 Animated objects/Fountain.png" id="2_403x6"]
