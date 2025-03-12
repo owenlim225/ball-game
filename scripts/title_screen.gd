@@ -2,56 +2,54 @@ extends Control
 
 # Scenes
 const EASY_LVL = preload("res://Scenes/easy_lvl.tscn")
+const MEDIUM_LVL = preload("res://scenes/mid_level.tscn")
 const HARD_LVL = preload("res://scenes/hard_level.tscn")
-const MEDIUM_LVL = preload("res://scenes/medium_lvl.tscn")
+
 # Panels
 @onready var main_screen: VBoxContainer = $Panel/mainScreen
 @onready var level_selection: VBoxContainer = $Panel/levelSelection
 
+# Main Menu Buttons
+@onready var start_btn: Button = $Panel/mainScreen/HBoxContainer/startBtn
+@onready var quit_btn: Button = $Panel/mainScreen/HBoxContainer/quitBtn
 
-# Main Menu
-@onready var start_btn: Button = $Panel/VBoxContainer/HBoxContainer/startBtn
-@onready var quit_btn: Button = $Panel/VBoxContainer/HBoxContainer/quitBtn
-
-
-# Diffuclty levels buttons
-@onready var easy_mode: Button = $Panel/VBoxContainer2/HBoxContainer/easyMode
-@onready var medium_mode: Button = $Panel/VBoxContainer2/HBoxContainer/mediumMode
-@onready var hard_mode: Button = $Panel/VBoxContainer2/HBoxContainer/hardMode
-
-var money:int = 0
-var level:int = 1
+# Difficulty Level Buttons
+@onready var easy_mode: Button = $Panel/levelSelection/HBoxContainer/easyMode
+@onready var medium_mode: Button = $Panel/levelSelection/HBoxContainer/mediumMode
+@onready var hard_mode: Button = $Panel/levelSelection/HBoxContainer/hardMode
 
 func _ready() -> void:
-	level_selection.hide()
 	main_screen.show()
-	money = GLOBAL.money
-	level = GLOBAL.level
+	level_selection.hide()
 	
-	easy_mode.disabled = level < 1
-	medium_mode.disabled = level < 2
-	hard_mode.disabled = level < 3
-	
-	
-	
+	call_deferred("update_buttons")  # Ensure UI updates properly
+
+func update_buttons() -> void:
+	easy_mode.disabled = !GLOBAL.easy
+	medium_mode.disabled = !GLOBAL.medium
+	hard_mode.disabled = !GLOBAL.hard
+
+	print("Easy Mode Disabled:", easy_mode.disabled)
+	print("Medium Mode Disabled:", medium_mode.disabled)
+	print("Hard Mode Disabled:", hard_mode.disabled)
+
+# Difficulty Selection
 func _on_easy_mode_pressed() -> void:
-	if level >= 1 and EASY_LVL:
+	if GLOBAL.easy:
 		get_tree().change_scene_to_packed(EASY_LVL)
 
 func _on_medium_mode_pressed() -> void:
-	if level >= 2 and MEDIUM_LVL:
+	if GLOBAL.medium:
 		get_tree().change_scene_to_packed(MEDIUM_LVL)
 
 func _on_hard_mode_pressed() -> void:
-	if level >= 3 and HARD_LVL:
+	if GLOBAL.hard:
 		get_tree().change_scene_to_packed(HARD_LVL)
 
-
-# Main Screen buttons
+# Main Menu Actions
 func _on_start_btn_pressed() -> void:
-	level_selection.show()
 	main_screen.hide()
-
+	level_selection.show()
 
 func _on_quit_btn_pressed() -> void:
-	pass # Replace with function body.
+	get_tree().quit()  # Exit game properly

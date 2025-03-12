@@ -4,50 +4,50 @@
 [ext_resource type="Script" path="res://scripts/gui.gd" id="1_v6qh6"]
 [ext_resource type="FontFile" uid="uid://bx75tlxirv80k" path="res://assets/FutureMillennium.ttf" id="3_yjimw"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_8ak0f"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_ou8ox"]
 atlas = ExtResource("1_eej2n")
 region = Rect2(0, 0, 24, 24)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_yrblu"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_hxhmh"]
 atlas = ExtResource("1_eej2n")
 region = Rect2(24, 0, 24, 24)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_rw1o6"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_kx8kk"]
 atlas = ExtResource("1_eej2n")
 region = Rect2(48, 0, 24, 24)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_afi65"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_bw1t6"]
 atlas = ExtResource("1_eej2n")
 region = Rect2(72, 0, 24, 24)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_vhcr8"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_0y5yl"]
 atlas = ExtResource("1_eej2n")
 region = Rect2(96, 0, 24, 24)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_hnod4"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_etnj3"]
 atlas = ExtResource("1_eej2n")
 region = Rect2(120, 0, 24, 24)
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_qm1vc"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_3w8wo"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_8ak0f")
+"texture": SubResource("AtlasTexture_ou8ox")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_yrblu")
+"texture": SubResource("AtlasTexture_hxhmh")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_rw1o6")
+"texture": SubResource("AtlasTexture_kx8kk")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_afi65")
+"texture": SubResource("AtlasTexture_bw1t6")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_vhcr8")
+"texture": SubResource("AtlasTexture_0y5yl")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_hnod4")
+"texture": SubResource("AtlasTexture_etnj3")
 }],
 "loop": true,
 "name": &"default",
@@ -70,7 +70,7 @@ theme_override_constants/margin_bottom = 20
 [node name="MoneyAnim" type="AnimatedSprite2D" parent="MarginContainer"]
 position = Vector2(570, 59)
 scale = Vector2(3.58333, 3.58333)
-sprite_frames = SubResource("SpriteFrames_qm1vc")
+sprite_frames = SubResource("SpriteFrames_3w8wo")
 autoplay = "default"
 
 [node name="MoneyCount" type="Label" parent="MarginContainer"]

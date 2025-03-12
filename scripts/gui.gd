@@ -9,6 +9,5 @@ func _ready() -> void:
 	GLOBAL.connect("update_money", update_money)
 	money_count.text = "0"
 
-
 func update_money() -> void:
 	money_count.text = str(GLOBAL.money)

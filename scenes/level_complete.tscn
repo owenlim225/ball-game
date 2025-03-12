@@ -5,6 +5,7 @@
 [ext_resource type="Theme" uid="uid://ce8sy3nokorkk" path="res://scenes/text.tres" id="3_2r14y"]
 
 [node name="LevelComplete" type="CanvasLayer"]
+visible = false
 script = ExtResource("1_fny5p")
 
 [node name="Panel" type="Panel" parent="."]

@@ -1,12 +1,50 @@
-[gd_scene load_steps=11 format=3 uid="uid://u4a6fyf64qo4"]
+[gd_scene load_steps=16 format=3 uid="uid://u4a6fyf64qo4"]
 
-[ext_resource type="PackedScene" uid="uid://dpywogmqhawh2" path="res://Scenes/background_day.tscn" id="1_tlwlt"]
-[ext_resource type="PackedScene" uid="uid://dwc6ittsux6dq" path="res://Scenes/player.tscn" id="2_xnn78"]
+[ext_resource type="Script" path="res://scenes/easy_lvl.gd" id="1_0goy0"]
+[ext_resource type="PackedScene" uid="uid://dpywogmqhawh2" path="res://scenes/background_day.tscn" id="1_tlwlt"]
+[ext_resource type="Texture2D" uid="uid://b7q16nkcrexqq" path="res://assets/4 Animated objects/Fountain.png" id="2_nhfxk"]
+[ext_resource type="PackedScene" uid="uid://dwc6ittsux6dq" path="res://scenes/player.tscn" id="2_xnn78"]
 [ext_resource type="Texture2D" uid="uid://dyywf5nsv5v6t" path="res://assets/Tileset.png" id="3_ofutg"]
-[ext_resource type="PackedScene" uid="uid://dvbdxejr5tlip" path="res://Scenes/money.tscn" id="4_wnrn6"]
-[ext_resource type="PackedScene" uid="uid://b5e5j53ciaxb1" path="res://scenes/gui.tscn" id="5_sv3h8"]
-[ext_resource type="PackedScene" uid="uid://dr1eucoo6drvt" path="res://scenes/savePoint.tscn" id="6_wpvws"]
-[ext_resource type="PackedScene" uid="uid://myhltkavubes" path="res://scenes/level_complete.tscn" id="7_dteea"]
+[ext_resource type="PackedScene" uid="uid://dvbdxejr5tlip" path="res://scenes/money.tscn" id="4_wnrn6"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1dw2s"]
+atlas = ExtResource("2_nhfxk")
+region = Rect2(0, 0, 72, 72)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3osqh"]
+atlas = ExtResource("2_nhfxk")
+region = Rect2(72, 0, 72, 72)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8eova"]
+atlas = ExtResource("2_nhfxk")
+region = Rect2(144, 0, 72, 72)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ec3yq"]
+atlas = ExtResource("2_nhfxk")
+region = Rect2(216, 0, 72, 72)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_pkf3k"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1dw2s")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3osqh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8eova")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ec3yq")
+}],
+"loop": true,
+"name": &"default",
+"speed": 12.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cjm48"]
+size = Vector2(56, 70)
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_hwtxa"]
 
@@ -709,15 +747,15 @@ texture = ExtResource("3_ofutg")
 23:14/0 = 0
 23:14/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 0:15/0 = 0
-0:15/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+0:15/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 4.625, -3.93395, 1.41663, -2.875, -4.625, -0.875, -8, 5, -8, 8, -2.25, 8, 8, -8, 8)
 1:15/0 = 0
-1:15/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:15/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 4.625, -8, -2.75, -6.375, -8, -2.25, -8, -1.25, -2.5, 1.875, -2.125, 4.5, -9.5, 8, -8, 8, 8, -8, 8)
 2:15/0 = 0
-2:15/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+2:15/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 4.625, -8, -2.75, -8, -8, -4.625, -8, -4.625, -1, 0.125, -2, 0.5, -8, 7, -5, 8, 8, -8, 8)
 3:15/0 = 0
-3:15/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+3:15/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 4.625, -8, -2.75, -6.625, -4.75, -5.25, 3.125, -2.25, 2.25, -1.625, -2.875, -2.375, -8, 4, -5.875, 8, -8, 8, 8, -8, 8)
 4:15/0 = 0
-4:15/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+4:15/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 4.625, -8, -8, -4.75, -8, -4.875, -4.25, -1.625, -2.875, 0.25, -8, 5.25, -8, 8, 4.5, 8, 8, -8, 8)
 5:15/0 = 0
 5:15/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 6:15/0 = 0
@@ -755,6 +793,19 @@ physics_layer_0/physics_material = SubResource("PhysicsMaterial_hwtxa")
 sources/0 = SubResource("TileSetAtlasSource_ge6pa")
 
 [node name="EasyLvl" type="Node2D"]
+script = ExtResource("1_0goy0")
+
+[node name="savePoint" type="Area2D" parent="."]
+position = Vector2(1978, 216.001)
+scale = Vector2(1.5, 1.5)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="savePoint"]
+sprite_frames = SubResource("SpriteFrames_pkf3k")
+autoplay = "default"
+frame_progress = 0.0499436
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="savePoint"]
+shape = SubResource("RectangleShape2D_cjm48")
 
 [node name="Background" parent="." instance=ExtResource("1_tlwlt")]
 
@@ -778,8 +829,6 @@ limit_smoothed = true
 position_smoothing_enabled = true
 editor_draw_limits = true
 
-[node name="GUI" parent="." instance=ExtResource("5_sv3h8")]
-
 [node name="Money" type="Node" parent="."]
 
 [node name="money" parent="Money" instance=ExtResource("4_wnrn6")]
@@ -802,12 +851,8 @@ scale = Vector2(1.5, 1.5)
 position = Vector2(800, 392)
 scale = Vector2(1.5, 1.5)
 
-[node name="savePoint" parent="Money/money5" instance=ExtResource("6_wpvws")]
-position = Vector2(785.333, -117.333)
-
 [node name="money6" parent="Money" instance=ExtResource("4_wnrn6")]
 position = Vector2(857, 393)
 scale = Vector2(1.5, 1.5)
 
-[node name="LevelComplete" parent="." instance=ExtResource("7_dteea")]
-visible = false
+[connection signal="body_entered" from="savePoint" to="." method="_on_save_point_body_entered"]
