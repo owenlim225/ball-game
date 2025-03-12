@@ -1,17 +1,13 @@
 [gd_scene load_steps=2 format=3 uid="uid://kghe0okir4ag"]
 
-[sub_resource type="GDScript" id="GDScript_wt8d5"]
-script/source = "extends Area2D
-
-
-
-
-func _on_body_entered(body: Node2D) -> void:
-	get_tree().reload_current_scene()
-	print(\"You died\")
-"
+[ext_resource type="Script" path="res://killzone.gd" id="1_cngr2"]
 
 [node name="Kill" type="Area2D"]
-script = SubResource("GDScript_wt8d5")
+script = ExtResource("1_cngr2")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.6
+one_shot = true
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

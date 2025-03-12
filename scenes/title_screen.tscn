@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://b8l6ygvhiku17" path="res://assets/2 Background/Day/Background.png" id="1_00gd4"]
 [ext_resource type="Script" path="res://scripts/title_screen.gd" id="1_ye3xv"]
 [ext_resource type="FontFile" uid="uid://bx75tlxirv80k" path="res://assets/FutureMillennium.ttf" id="2_se1gx"]
-[ext_resource type="Theme" uid="uid://ce8sy3nokorkk" path="res://scenes/text.tres" id="4_l3e00"]
+[ext_resource type="Theme" uid="uid://ce8sy3nokorkk" path="res://assets/text.tres" id="4_l3e00"]
 
 [node name="TitleScreen" type="Control"]
 layout_mode = 3

@@ -1,11 +1,11 @@
 [gd_scene load_steps=23 format=3 uid="uid://bd3pre3ym0vdo"]
 
 [ext_resource type="Script" path="res://scripts/shopScript.gd" id="1_cd4u8"]
-[ext_resource type="Script" path="res://scenes/ui_manager.gd" id="1_uxca4"]
+[ext_resource type="Script" path="res://scripts/ui_manager.gd" id="1_uxca4"]
 [ext_resource type="Texture2D" uid="uid://b2kkky8h5v2os" path="res://assets/4 Animated objects/Money.png" id="2_uky5p"]
 [ext_resource type="FontFile" uid="uid://bx75tlxirv80k" path="res://assets/FutureMillennium.ttf" id="3_pyyc4"]
 [ext_resource type="Script" path="res://level_complete.gd" id="4_t832k"]
-[ext_resource type="Theme" uid="uid://ce8sy3nokorkk" path="res://scenes/text.tres" id="5_efb0k"]
+[ext_resource type="Theme" uid="uid://ce8sy3nokorkk" path="res://assets/text.tres" id="5_efb0k"]
 [ext_resource type="Script" path="res://scripts/gui.gd" id="6_2wbfh"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ou8ox"]
