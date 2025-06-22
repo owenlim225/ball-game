@@ -1,10 +1,10 @@
 [gd_scene load_steps=6 format=3 uid="uid://c8v1opdykq7ej"]
 
-[ext_resource type="Texture2D" uid="uid://dcdxptj4l408u" path="res://Assets/2 Background/Night/1.png" id="1_jqk0h"]
-[ext_resource type="Texture2D" uid="uid://cye8b1prkhvuy" path="res://Assets/2 Background/Night/2.png" id="2_th331"]
-[ext_resource type="Texture2D" uid="uid://bbsgm7g53wrjt" path="res://Assets/2 Background/Night/3.png" id="3_gegp7"]
-[ext_resource type="Texture2D" uid="uid://btwq0muors7e6" path="res://Assets/2 Background/Night/4.png" id="4_0v7rf"]
-[ext_resource type="Texture2D" uid="uid://ddpx04bh4262m" path="res://Assets/2 Background/Night/5.png" id="5_djewl"]
+[ext_resource type="Texture2D" uid="uid://dcdxptj4l408u" path="res://assets/2 Background/Night/1.png" id="1_jqk0h"]
+[ext_resource type="Texture2D" uid="uid://cye8b1prkhvuy" path="res://assets/2 Background/Night/2.png" id="2_th331"]
+[ext_resource type="Texture2D" uid="uid://bbsgm7g53wrjt" path="res://assets/2 Background/Night/3.png" id="3_gegp7"]
+[ext_resource type="Texture2D" uid="uid://btwq0muors7e6" path="res://assets/2 Background/Night/4.png" id="4_0v7rf"]
+[ext_resource type="Texture2D" uid="uid://ddpx04bh4262m" path="res://assets/2 Background/Night/5.png" id="5_djewl"]
 
 [node name="Background" type="ParallaxBackground"]
 

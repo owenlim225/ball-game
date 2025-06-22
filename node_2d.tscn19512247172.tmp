@@ -1,0 +1,55 @@
+[gd_scene load_steps=6 format=3 uid="uid://bru2g73dnw5px"]
+
+[ext_resource type="Texture2D" uid="uid://pr0bn3dwmf50" path="res://bakwa/Artboard 1.jpg" id="1_0e48y"]
+[ext_resource type="Script" uid="uid://c6h4ye1cy2owy" path="res://camera_2d.gd" id="1_0hol4"]
+[ext_resource type="PackedScene" uid="uid://dwc6ittsux6dq" path="res://scenes/player.tscn" id="2_epypp"]
+[ext_resource type="Texture2D" uid="uid://cfl3purk8jfb8" path="res://bakwa/qwe1.png" id="3_epypp"]
+
+[sub_resource type="Curve2D" id="Curve2D_epypp"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(284, 604)
+scale = Vector2(0.998044, 1.00867)
+zoom = Vector2(0.3, 0.3)
+limit_left = -1000
+limit_bottom = 820
+drag_left_margin = 1.0
+drag_top_margin = 1.0
+drag_right_margin = 1.0
+drag_bottom_margin = 1.0
+script = ExtResource("1_0hol4")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="Artboard1" type="Sprite2D" parent="StaticBody2D"]
+position = Vector2(4757, -675)
+scale = Vector2(3, 3)
+texture = ExtResource("1_0e48y")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PackedVector2Array(-1009, 935, -1013, -585, -408, 666, 110, 606, 1110, 690, 1226, 740, 1360, 673, 1571, 634, 1655, 562, 1933, 573, 2060, 490, 2149, 445, 2261, 434, 2344, 384, 2422, 329, 2605, 351, 2855, 368, 2967, 445, 3122, 551, 3406, 651, 3601, 707, 3979, 729, 4218, 773, 4396, 824, 4585, 768, 4808, 768, 4974, 679, 5141, 696, 5302, 701, 5441, 718, 5603, 757, 5780, 662, 6068, 696, 6262, 657, 6457, 579, 6640, 590, 6913, 495, 7196, 501, 7324, 440, 7535, 329, 7736, 229, 7930, 190, 8119, 84, 8403, 78, 8675, 67, 9092, 40, 9370, 84, 9631, 95, 9681, 101, 10015, 151, 10160, 179, 10504, -600, 10527, 946)
+
+[node name="Player" parent="." instance=ExtResource("2_epypp")]
+position = Vector2(276, -592)
+
+[node name="Path2D" type="Path2D" parent="."]
+curve = SubResource("Curve2D_epypp")
+
+[node name="BackgroundUpperLayer" type="Node" parent="."]
+
+[node name="Qwe1" type="Sprite2D" parent="BackgroundUpperLayer"]
+position = Vector2(4757, -675)
+scale = Vector2(3, 3)
+texture = ExtResource("3_epypp")
+
+[node name="Qwe2" type="Sprite2D" parent="BackgroundUpperLayer"]
+position = Vector2(4757, -675)
+scale = Vector2(3, 3)
+texture = ExtResource("3_epypp")
+
+[node name="Qwe3" type="Sprite2D" parent="BackgroundUpperLayer"]
+position = Vector2(4757, -675)
+scale = Vector2(3, 3)
+texture = ExtResource("3_epypp")

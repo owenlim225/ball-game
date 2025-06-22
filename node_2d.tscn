@@ -1,0 +1,135 @@
+[gd_scene load_steps=11 format=3 uid="uid://bru2g73dnw5px"]
+
+[ext_resource type="Script" uid="uid://c6h4ye1cy2owy" path="res://camera_2d.gd" id="1_0hol4"]
+[ext_resource type="Script" uid="uid://bagdlv8ea4vcu" path="res://World.gd" id="1_d21ai"]
+[ext_resource type="PackedScene" uid="uid://dwc6ittsux6dq" path="res://scenes/player.tscn" id="2_epypp"]
+[ext_resource type="Texture2D" uid="uid://clj3ohqqjmb3h" path="res://bakwa/main-top.png" id="2_q6r6c"]
+[ext_resource type="Texture2D" uid="uid://bbloj287skj2k" path="res://bakwa/ladder.png" id="3_kdubu"]
+[ext_resource type="Texture2D" uid="uid://bmo4aj7wb4mye" path="res://bakwa/grass-verlay.png" id="5_d21ai"]
+[ext_resource type="Texture2D" uid="uid://uy3eds50ts4h" path="res://bakwa/grass-green.png" id="5_kdubu"]
+[ext_resource type="PackedScene" uid="uid://dhjebybwbei7v" path="res://camera_up.tscn" id="8_rj586"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d21ai"]
+size = Vector2(431, 55.5)
+
+[sub_resource type="Curve2D" id="Curve2D_epypp"]
+
+[node name="World" type="Node2D"]
+script = ExtResource("1_d21ai")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(284, 604)
+scale = Vector2(0.998044, 1.00867)
+zoom = Vector2(0.5, 0.5)
+limit_left = 10
+limit_right = 11500
+limit_bottom = 820
+drag_left_margin = 1.0
+drag_top_margin = 1.0
+drag_right_margin = 1.0
+drag_bottom_margin = 1.0
+script = ExtResource("1_0hol4")
+
+[node name="main" type="StaticBody2D" parent="."]
+
+[node name="Artboard1" type="Sprite2D" parent="main"]
+position = Vector2(5760, -6601)
+scale = Vector2(3, 3)
+texture = ExtResource("2_q6r6c")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="main"]
+position = Vector2(1013, -116)
+polygon = PackedVector2Array(-1022, 913, -999, 292, -1018, -1024, -759, 241, -582, 175, -441, 123, -182, 167, 114, 264, 247, 345, 491, 404, 780, 338, 1039, 264, 1246, 249, 1520, 93, 1927, 49, 2275, 145, 2526, 219, 2696, 308, 2882, 426, 2948, 449, 3224, 523, 3365, 619, 3646, 619, 3853, 708, 4172, 752, 4475, 678, 4667, 641, 4904, 685, 5119, 619, 5259, 545, 5430, 471, 5689, 523, 5860, 503, 6000, 452, 6118, 382, 6436, 138, 6658, 79, 6895, 12, 7317, -32, 7598, -92, 7864, -195, 8419, -225, 8590, -277, 8745, -277, 8915, -173, 9130, -99, 9411, -77, 9737, -69, 10491, 82, 10521, -2030, 10514, 937)
+
+[node name="ladder" type="StaticBody2D" parent="."]
+
+[node name="Artboard1" type="Sprite2D" parent="ladder"]
+position = Vector2(5760, -6601)
+scale = Vector2(3, 3)
+texture = ExtResource("3_kdubu")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ladder"]
+position = Vector2(9631.5, -669.25)
+shape = SubResource("RectangleShape2D_d21ai")
+one_way_collision = true
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="ladder"]
+position = Vector2(9620, -1277)
+rotation = -0.233184
+shape = SubResource("RectangleShape2D_d21ai")
+one_way_collision = true
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="ladder"]
+position = Vector2(9633, -964)
+rotation = -0.104813
+shape = SubResource("RectangleShape2D_d21ai")
+one_way_collision = true
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="ladder"]
+position = Vector2(9620.5, -1592.25)
+rotation = -0.301117
+shape = SubResource("RectangleShape2D_d21ai")
+one_way_collision = true
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="ladder"]
+position = Vector2(9614, -2192)
+rotation = 0.00887884
+shape = SubResource("RectangleShape2D_d21ai")
+one_way_collision = true
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="ladder"]
+position = Vector2(9646, -2575)
+rotation = -0.193822
+shape = SubResource("RectangleShape2D_d21ai")
+one_way_collision = true
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="ladder"]
+position = Vector2(9622, -1887)
+rotation = -0.189897
+shape = SubResource("RectangleShape2D_d21ai")
+one_way_collision = true
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="ladder"]
+polygon = PackedVector2Array(2531, -4745, 3350, -4284, 4152, -3812, 5497, -3303, 6735, -2982, 7683, -2768, 8302, -2070, 9380, -2278, 9386, -2778, 9406, -2953, 8370, -2886, 6870, -3103, 5677, -3465, 4287, -3971, 2672, -4826)
+one_way_collision = true
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="ladder"]
+one_way_collision = true
+
+[node name="Player" parent="." instance=ExtResource("2_epypp")]
+position = Vector2(9542, -3572)
+speed = 250.0
+start_x = 529.0
+end_x = 9667.0
+start_scale = Vector2(6, 6)
+end_scale = Vector2(3, 3)
+
+[node name="Path2D" type="Path2D" parent="."]
+curve = SubResource("Curve2D_epypp")
+
+[node name="BackgroundUpperLayer" type="Node" parent="."]
+
+[node name="Grass_overlay2" type="Sprite2D" parent="BackgroundUpperLayer"]
+position = Vector2(5760, -6601)
+scale = Vector2(3, 3)
+texture = ExtResource("5_kdubu")
+
+[node name="Grass_overlay" type="Sprite2D" parent="BackgroundUpperLayer"]
+position = Vector2(5760, -6601)
+scale = Vector2(3, 3)
+texture = ExtResource("5_d21ai")
+
+[node name="Grass_overlay3" type="Sprite2D" parent="BackgroundUpperLayer"]
+position = Vector2(5760, -6601)
+scale = Vector2(3, 3)
+texture = ExtResource("5_d21ai")
+
+[node name="Grass_overlay4" type="Sprite2D" parent="BackgroundUpperLayer"]
+position = Vector2(5760, -6601)
+scale = Vector2(3, 3)
+texture = ExtResource("5_d21ai")
+
+[node name="CameraUp" parent="." instance=ExtResource("8_rj586")]
+
+[node name="CameraUp2" parent="." instance=ExtResource("8_rj586")]
+position = Vector2(-3931, -3136)

@@ -1,6 +1,6 @@
 [gd_scene load_steps=12 format=3 uid="uid://cyvwsnch0i4e6"]
 
-[ext_resource type="Script" path="res://scripts/shopScript.gd" id="1_ohimr"]
+[ext_resource type="Script" uid="uid://khb3l83kgbls" path="res://scripts/shopScript.gd" id="1_ohimr"]
 [ext_resource type="Texture2D" uid="uid://b2kkky8h5v2os" path="res://assets/4 Animated objects/Money.png" id="2_fqub2"]
 [ext_resource type="FontFile" uid="uid://bx75tlxirv80k" path="res://assets/FutureMillennium.ttf" id="3_6d4kr"]
 

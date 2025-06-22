@@ -1,6 +1,6 @@
 [gd_scene load_steps=18 format=3 uid="uid://st6fu8rv5mfn"]
 
-[ext_resource type="Script" path="res://mid_lvl.gd" id="1_g2eou"]
+[ext_resource type="Script" uid="uid://b2pfrxv7kpxcn" path="res://mid_lvl.gd" id="1_g2eou"]
 [ext_resource type="Texture2D" uid="uid://b7q16nkcrexqq" path="res://assets/4 Animated objects/Fountain.png" id="2_bfjre"]
 [ext_resource type="PackedScene" uid="uid://dpywogmqhawh2" path="res://scenes/background_day.tscn" id="3_2yyw5"]
 [ext_resource type="Texture2D" uid="uid://dyywf5nsv5v6t" path="res://assets/Tileset.png" id="4_pm700"]

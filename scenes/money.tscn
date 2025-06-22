@@ -1,6 +1,6 @@
 [gd_scene load_steps=11 format=3 uid="uid://dvbdxejr5tlip"]
 
-[ext_resource type="Script" path="res://Scripts/money.gd" id="1_keewe"]
+[ext_resource type="Script" uid="uid://js7dudb8gd2k" path="res://Scripts/money.gd" id="1_keewe"]
 [ext_resource type="Texture2D" uid="uid://b2kkky8h5v2os" path="res://assets/4 Animated objects/Money.png" id="1_q75sa"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_o7xj8"]

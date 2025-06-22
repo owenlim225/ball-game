@@ -7,6 +7,6 @@ signal update_level
 var money:int = 0
 
 
-var easy:bool = true
+var easy:bool = false
 var medium:bool = false
-var hard:bool = false
+var hard:bool = true

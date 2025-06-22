@@ -1,7 +1,7 @@
 [gd_scene load_steps=11 format=3 uid="uid://b5e5j53ciaxb1"]
 
 [ext_resource type="Texture2D" uid="uid://b2kkky8h5v2os" path="res://assets/4 Animated objects/Money.png" id="1_eej2n"]
-[ext_resource type="Script" path="res://scripts/gui.gd" id="1_v6qh6"]
+[ext_resource type="Script" uid="uid://c6pl2e1n250d0" path="res://scripts/gui.gd" id="1_v6qh6"]
 [ext_resource type="FontFile" uid="uid://bx75tlxirv80k" path="res://assets/FutureMillennium.ttf" id="3_yjimw"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ou8ox"]
