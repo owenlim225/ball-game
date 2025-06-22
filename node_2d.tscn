@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://bru2g73dnw5px"]
+[gd_scene load_steps=21 format=3 uid="uid://bru2g73dnw5px"]
 
 [ext_resource type="Script" uid="uid://c6h4ye1cy2owy" path="res://camera_2d.gd" id="1_0hol4"]
 [ext_resource type="Script" uid="uid://bagdlv8ea4vcu" path="res://World.gd" id="1_d21ai"]
@@ -7,12 +7,30 @@
 [ext_resource type="Texture2D" uid="uid://bbloj287skj2k" path="res://bakwa/ladder.png" id="3_kdubu"]
 [ext_resource type="Texture2D" uid="uid://bmo4aj7wb4mye" path="res://bakwa/grass-verlay.png" id="5_d21ai"]
 [ext_resource type="Texture2D" uid="uid://uy3eds50ts4h" path="res://bakwa/grass-green.png" id="5_kdubu"]
-[ext_resource type="PackedScene" uid="uid://dhjebybwbei7v" path="res://camera_up.tscn" id="8_rj586"]
+[ext_resource type="AudioStream" uid="uid://e8u2vgxcc5lv" path="res://records/fragment 1.mp3" id="8_0h7mo"]
+[ext_resource type="AudioStream" uid="uid://d0wymsh0fr6pm" path="res://records/fragment 2.mp3" id="9_nr8wp"]
+[ext_resource type="AudioStream" uid="uid://v1xcjueeghpl" path="res://records/fragment 3.mp3" id="10_d2bti"]
+[ext_resource type="AudioStream" uid="uid://dstiockcakhed" path="res://records/fragment 4.mp3" id="11_ta5nu"]
+[ext_resource type="AudioStream" uid="uid://b3t1q2obhtdaj" path="res://records/intro.mp3" id="12_flf07"]
+[ext_resource type="AudioStream" uid="uid://cx6g56kfhvvb" path="res://records/final ending.mp3" id="13_k73cj"]
+[ext_resource type="Theme" uid="uid://bdq3e8agll3yw" path="res://rich_text.tres" id="14_nr8wp"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_d21ai"]
-size = Vector2(431, 55.5)
+size = Vector2(1357.26, 255.247)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d2bti"]
+size = Vector2(373.41, 107.327)
 
 [sub_resource type="Curve2D" id="Curve2D_epypp"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rj586"]
+size = Vector2(351, 138)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_rjqkl"]
+radius = 256.127
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nr8wp"]
+size = Vector2(347, 239)
 
 [node name="World" type="Node2D"]
 script = ExtResource("1_d21ai")
@@ -33,7 +51,7 @@ script = ExtResource("1_0hol4")
 [node name="main" type="StaticBody2D" parent="."]
 
 [node name="Artboard1" type="Sprite2D" parent="main"]
-position = Vector2(5760, -6601)
+position = Vector2(5764, -6622)
 scale = Vector2(3, 3)
 texture = ExtResource("2_q6r6c")
 
@@ -65,6 +83,12 @@ rotation = -0.104813
 shape = SubResource("RectangleShape2D_d21ai")
 one_way_collision = true
 
+[node name="CollisionShape2D12" type="CollisionShape2D" parent="ladder"]
+position = Vector2(1085, -11453)
+rotation = -0.0275974
+shape = SubResource("RectangleShape2D_d21ai")
+one_way_collision = true
+
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="ladder"]
 position = Vector2(9620.5, -1592.25)
 rotation = -0.301117
@@ -83,6 +107,30 @@ rotation = -0.193822
 shape = SubResource("RectangleShape2D_d21ai")
 one_way_collision = true
 
+[node name="CollisionShape2D8" type="CollisionShape2D" parent="ladder"]
+position = Vector2(8440, -6576)
+rotation = -0.121058
+shape = SubResource("RectangleShape2D_d2bti")
+one_way_collision = true
+
+[node name="CollisionShape2D9" type="CollisionShape2D" parent="ladder"]
+position = Vector2(8426, -6983)
+rotation = -0.28975
+shape = SubResource("RectangleShape2D_d2bti")
+one_way_collision = true
+
+[node name="CollisionShape2D10" type="CollisionShape2D" parent="ladder"]
+position = Vector2(8372, -7444)
+rotation = -0.150053
+shape = SubResource("RectangleShape2D_d2bti")
+one_way_collision = true
+
+[node name="CollisionShape2D11" type="CollisionShape2D" parent="ladder"]
+position = Vector2(8337, -7965)
+rotation = -0.150053
+shape = SubResource("RectangleShape2D_d2bti")
+one_way_collision = true
+
 [node name="CollisionShape2D6" type="CollisionShape2D" parent="ladder"]
 position = Vector2(9622, -1887)
 rotation = -0.189897
@@ -93,11 +141,20 @@ one_way_collision = true
 polygon = PackedVector2Array(2531, -4745, 3350, -4284, 4152, -3812, 5497, -3303, 6735, -2982, 7683, -2768, 8302, -2070, 9380, -2278, 9386, -2778, 9406, -2953, 8370, -2886, 6870, -3103, 5677, -3465, 4287, -3971, 2672, -4826)
 one_way_collision = true
 
+[node name="CollisionPolygon2D4" type="CollisionPolygon2D" parent="ladder"]
+polygon = PackedVector2Array(8658, -8263, 8901, -8377, 9232, -8335, 9573, -8392, 9824, -8483, 10223, -8528, 10697, -8445, 10929, -8532, 10933, -8263, 10694, -7860, 9729, -7807, 9365, -7708, 8901, -7792, 8662, -8175)
+one_way_collision = true
+
 [node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="ladder"]
+polygon = PackedVector2Array(3106, -4840, 3995, -5246, 5341, -5768, 6614, -6030, 7276, -6080, 7897, -5990, 8886, -6125, 9246, -6312, 8043, -6167, 7762, -6167, 7053, -6191, 6453, -6136, 5059, -5794, 4355, -5488, 3646, -5195)
+one_way_collision = true
+
+[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="ladder"]
+polygon = PackedVector2Array(2631, -4918, 2347, -4943, 1967, -4817, 1595, -4792, 1320, -4955, 994, -4851, 1115, -4513, 1825, -4028, 2519, -4066, 2982, -4421, 2523, -4759, 2656, -4809)
 one_way_collision = true
 
 [node name="Player" parent="." instance=ExtResource("2_epypp")]
-position = Vector2(9542, -3572)
+position = Vector2(7653, -7190)
 speed = 250.0
 start_x = 529.0
 end_x = 9667.0
@@ -129,7 +186,184 @@ position = Vector2(5760, -6601)
 scale = Vector2(3, 3)
 texture = ExtResource("5_d21ai")
 
-[node name="CameraUp" parent="." instance=ExtResource("8_rj586")]
+[node name="CameraUp" type="Area2D" parent="."]
+position = Vector2(9636, -412)
 
-[node name="CameraUp2" parent="." instance=ExtResource("8_rj586")]
-position = Vector2(-3931, -3136)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CameraUp"]
+shape = SubResource("RectangleShape2D_rj586")
+
+[node name="Intro" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Intro"]
+position = Vector2(812, 171)
+scale = Vector2(3.36, 1)
+shape = SubResource("CircleShape2D_rjqkl")
+
+[node name="fragment1" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("8_0h7mo")
+
+[node name="fragment2" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("9_nr8wp")
+
+[node name="fragment3" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("10_d2bti")
+
+[node name="fragment4" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("11_ta5nu")
+
+[node name="intro" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("12_flf07")
+
+[node name="finalEnding" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("13_k73cj")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+offset_left = 5659.0
+offset_top = -1727.0
+offset_right = 9370.0
+offset_bottom = 696.0
+theme = ExtResource("14_nr8wp")
+text = "
+But don’t worry. You’ll remind him.
+
+Now then…
+Move with the arrow keys.
+The story’s waiting.\""
+tab_size = 5
+
+[node name="RichTextLabel8" type="RichTextLabel" parent="."]
+offset_left = 9132.0
+offset_top = -4214.0
+offset_right = 12843.0
+offset_bottom = -1791.0
+theme = ExtResource("14_nr8wp")
+text = "You’ll walk. You’ll listen.
+You’ll put things back together.
+
+Somewhere across this plain waits a little man
+with the heart of a girl—gentle, real, and
+ utterly misunderstood.
+He forgot who he was.
+"
+tab_size = 5
+
+[node name="RichTextLabel7" type="RichTextLabel" parent="."]
+offset_left = 387.0
+offset_top = -2076.0
+offset_right = 4098.0
+offset_bottom = 347.0
+theme = ExtResource("14_nr8wp")
+text = "\"Welcome.
+
+You’re here to collect pieces.
+Not just images—memories.
+Not just for him—for you, too.
+
+"
+tab_size = 5
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="."]
+offset_left = 4546.0
+offset_top = -5248.0
+offset_right = 8257.0
+offset_bottom = -2825.0
+theme = ExtResource("14_nr8wp")
+text = "\"The first memory hurts.
+It always does.
+
+This one’s a fist.
+Not just the hit—but what it meant:
+“You’re not like us, so we’ll break you.”
+
+It wasn’t about correction.
+It was punishment—for being soft.\""
+tab_size = 5
+
+[node name="RichTextLabel3" type="RichTextLabel" parent="."]
+offset_left = 931.0
+offset_top = -6976.0
+offset_right = 4642.0
+offset_bottom = -4553.0
+theme = ExtResource("14_nr8wp")
+text = "\"Words.
+So casual. So cruel.
+
+“Gay.” “Freak.” “Bakla.”
+Said with a grin, like it was funny.
+
+He laughed too.
+At first.\""
+tab_size = 5
+
+[node name="RichTextLabel4" type="RichTextLabel" parent="."]
+offset_left = 8784.0
+offset_top = -6066.0
+offset_right = 12495.0
+offset_bottom = -3643.0
+theme = ExtResource("14_nr8wp")
+theme_override_font_sizes/normal_font_size = 60
+text = "He started asking dangerous questions.
+“Why do I feel this way?”
+“Is something wrong with me?”
+
+The world gave no answers.
+Just noise.
+And silence.
+
+only saw someone he was taught to hate.
+And hate is a heavy thing 
+to carry inside a soft soul.
+"
+tab_size = 5
+
+[node name="RichTextLabel5" type="RichTextLabel" parent="."]
+offset_left = 3915.0
+offset_top = -10130.0
+offset_right = 7626.0
+offset_bottom = -7707.0
+theme = ExtResource("14_nr8wp")
+text = "\"He didn’t want a parade.
+Just someone to stay.
+
+To say:
+“I see you.”
+And mean it.
+
+He wasn’t looking for saving.
+Just softness, without judgment.\""
+tab_size = 5
+
+[node name="RichTextLabel6" type="RichTextLabel" parent="."]
+offset_left = 1973.0
+offset_top = -13253.0
+offset_right = 5684.0
+offset_bottom = -10830.0
+theme = ExtResource("14_nr8wp")
+text = "\"And here we are.
+
+Four fragments. Four scars.
+But scars are proof you survived.
+
+You’re not here to erase the pain.
+You’re here to return the truth:
+That even broken pieces make a whole picture.
+
+Give it to him.
+Let him see it.
+Let yourself see it.
+
+You are not broken.
+You are becoming.\""
+tab_size = 5
+
+[node name="GET BIG" type="Area2D" parent="."]
+position = Vector2(8151, -6484)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="GET BIG"]
+position = Vector2(209, -426)
+shape = SubResource("RectangleShape2D_nr8wp")
+
+[connection signal="body_entered" from="CameraUp" to="." method="_on_camera_up_body_entered"]
+[connection signal="body_exited" from="CameraUp" to="." method="_on_camera_up_body_exited"]
+[connection signal="body_entered" from="Intro" to="." method="_on_intro_body_entered"]
+[connection signal="body_entered" from="GET BIG" to="." method="_on_get_big_body_entered"]
