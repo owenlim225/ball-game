@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://c7dnt2shxqf8c"
+path="res://.godot/imported/untitled.dialogue-9cdc08c4594206593f1e8ab7cff9c58e.tres"
+
+[deps]
+
+source_file="res://bakwa/untitled.dialogue"
+dest_files=["res://.godot/imported/untitled.dialogue-9cdc08c4594206593f1e8ab7cff9c58e.tres"]
+
+[params]
+
+defaults=true
