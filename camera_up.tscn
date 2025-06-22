@@ -1,10 +1,14 @@
-[gd_scene load_steps=2 format=3 uid="uid://dhjebybwbei7v"]
+[gd_scene load_steps=3 format=3 uid="uid://dhjebybwbei7v"]
+
+[ext_resource type="Script" uid="uid://dj8dr0702jg5" path="res://camera_up.gd" id="1_yjt5x"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rj586"]
 size = Vector2(351, 138)
 
 [node name="CameraUp" type="Area2D"]
+script = ExtResource("1_yjt5x")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(9646, -462)
 shape = SubResource("RectangleShape2D_rj586")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
